@@ -45,9 +45,14 @@ std::string WarmupChallenges::Test3(std::vector<int>& arr_a, std::vector<int>& a
     return std::to_string(a_points) + " " + std::to_string(b_points);
 }
 
-void WarmupChallenges::Test4(void)
+unsigned long long int WarmupChallenges::Test4(int n, std::vector<unsigned long long int>& arr)
 {
+	unsigned long long int sum = 0;
+    for(int arr_i = 0;arr_i < n;arr_i++){
+      sum += arr[arr_i];
+    }
 
+    return sum;
 }
 
 void WarmupChallenges::Test5(void)
