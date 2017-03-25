@@ -55,10 +55,18 @@ unsigned long long int WarmupChallenges::Test4(int n, std::vector<unsigned long 
     return sum;
 }
 
-void WarmupChallenges::Test5(void)
+int WarmupChallenges::Test5(int n, std::vector<std::vector<int>> arr)
 {
-    std::cout << "" << std::endl << "-------------------" << std::endl;
+	int diag_a = 0, diag_b = 0;
 
-    std::cout << "" << std::endl;
-    std::cout << "-------------------" << std::endl;
+	for(int a_i = 0; a_i < n; a_i++){
+	   for(int a_j = 0; a_j < n; a_j++){
+		  if(a_i == a_j) //sum of diag_a
+			diag_a += arr[a_i][a_j];
+		  if((a_i+a_j+1) == n) //sum of diag_b
+			diag_b += arr[a_i][a_j];
+	   }
+	}
+
+	return abs(diag_b - diag_a);
 }
