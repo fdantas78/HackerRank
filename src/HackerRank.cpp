@@ -99,10 +99,9 @@ int main() {
 
 		//Initialization
 		int n = 6;
-		std::vector<int> arr = {-4,3,-9,0,4,1};
 
 		//Solution
-		std::cout << pWarmupChallenges->Test6(n, arr) << std::endl;
+		std::cout << pWarmupChallenges->Test7(n) << std::endl;
 		pWarmupChallenges->Print_Separator();
 	}
 	return 0;

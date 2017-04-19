@@ -93,20 +93,10 @@ std::string WarmupChallenges::Test6(int n, std::vector<int> arr)
 
 std::string WarmupChallenges::Test7(int n)
 {
-	double iPositive = 0, iNegative = 0, iZero = 0;
-
-	for(int i = 0; i < n; i++){
-	//  if(arr[i] > 0)
-		  iPositive++;
-	//  else if(arr[i] < 0)
-		  iNegative++;
-	//  else
-		  iZero++;
-
-	  //std::cout << i << ":" << arr[i] << ",";
+	std::ostringstream osStair;
+	for(int i = 1; i <= n; i++){
+		osStair << std::setw(n) << std::string(i, '#') << std::endl;
 	}
 
-	//std::cout << iPositive << " " << iNegative << " " << iZero << std::endl;
-	//std::printf("%8.6f\n%8.6f\n%8.6f\n",(iPositive/n),(iNegative/n),(iZero/n));
-	return std::to_string(iPositive/n) + "\n" + std::to_string(iNegative/n) + "\n" + std::to_string(iZero/n);
+	return osStair.str();
 }
