@@ -77,8 +77,33 @@ int main() {
 
 		//Solution
 		std::cout << pWarmupChallenges->Test5(n, arr) << std::endl;
-		std::cout << "-------------------" << std::endl;
+		pWarmupChallenges->Print_Separator();
 	}
 
+	{
+		std::cout << "Plus Minus" << std::endl;
+		pWarmupChallenges->Print_Separator();
+
+		//Initialization
+		int n = 6;
+		std::vector<int> arr = {-4,3,-9,0,4,1};
+
+		//Solution
+		std::cout << pWarmupChallenges->Test6(n, arr) << std::endl;
+		pWarmupChallenges->Print_Separator();
+	}
+
+	{
+		std::cout << "Staircase" << std::endl;
+		pWarmupChallenges->Print_Separator();
+
+		//Initialization
+		int n = 6;
+		std::vector<int> arr = {-4,3,-9,0,4,1};
+
+		//Solution
+		std::cout << pWarmupChallenges->Test6(n, arr) << std::endl;
+		pWarmupChallenges->Print_Separator();
+	}
 	return 0;
 }

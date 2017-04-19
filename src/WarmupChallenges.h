@@ -30,6 +30,7 @@
 #include <iostream>
 #include <algorithm>
 #include <unordered_map>
+#include <iomanip>
 
 class WarmupChallenges {
 public:
@@ -43,6 +44,8 @@ public:
 	std::string Test3(std::vector<int>& arr_a, std::vector<int>& arr_b);
 	unsigned long long int Test4(int n, std::vector<unsigned long long int>& arr);
 	int Test5(int n, std::vector<std::vector<int>> arr);
+	std::string Test6(int n, std::vector<int> arr);
+	std::string Test7(int n);
 };
 
 #endif /* WARMUPCHALLENGES_H_ */
