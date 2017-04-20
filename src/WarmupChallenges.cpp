@@ -100,3 +100,23 @@ std::string WarmupChallenges::Test7(int n)
 
 	return osStair.str();
 }
+
+std::string WarmupChallenges::Test8(int n, std::vector<long long int>& arr)
+{
+	std::ostringstream osResult;
+	long long int iMin = 0, iMax = 0;
+
+	//Order arry min to max
+	std::sort(arr.begin(), arr.end(),std::less<long long int>());
+
+	for(int i = 0; i < arr.size(); i++){
+		if(i < n) //Sums only the first n numbers
+			iMin += arr[i];
+		if(i >= (arr.size() - n))  //Sums only the last n numbers
+			iMax += arr[i];
+
+		//std::cout << arr[i] << ' ' << iMin << ' ' << iMax << std::endl;
+    }
+
+	return std::to_string(iMin) + " " + std::to_string(iMax);
+}

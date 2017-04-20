@@ -104,5 +104,19 @@ int main() {
 		std::cout << pWarmupChallenges->Test7(n) << std::endl;
 		pWarmupChallenges->Print_Separator();
 	}
+
+	{
+		std::cout << "Mini-Max Sum" << std::endl;
+		pWarmupChallenges->Print_Separator();
+
+		//Initialization
+		int n = 6;
+		std::vector<long long int> arr = {1, 2256, 5, 4, 3, 88556, 7, 8};
+
+		//Solution
+		std::cout << pWarmupChallenges->Test8(n,arr) << std::endl;
+		pWarmupChallenges->Print_Separator();
+	}
+
 	return 0;
 }
