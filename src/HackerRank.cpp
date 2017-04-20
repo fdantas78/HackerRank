@@ -130,5 +130,17 @@ int main() {
 		pWarmupChallenges->Print_Separator();
 	}
 
+	{
+		std::cout << "Birthday Cake Candles" << std::endl;
+		pWarmupChallenges->Print_Separator();
+
+		unsigned long int n = 10;
+		std::vector<unsigned long int> arr = {10,18, 90, 90, 13, 90, 75, 90, 8, 90, 43};
+
+		//Solution
+		std::cout << pWarmupChallenges->Test10(n, arr) << std::endl;
+		pWarmupChallenges->Print_Separator();
+	}
+
 	return 0;
 }

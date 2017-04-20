@@ -48,6 +48,7 @@ public:
 	std::string Test7(int n);
 	std::string Test8(unsigned int n, std::vector<long long int>& arr);
 	std::string Test9(std::string sInput);
+	std::string Test10(unsigned long int n, std::vector<unsigned long int> arr);
 };
 
 #endif /* WARMUPCHALLENGES_H_ */

@@ -8,12 +8,11 @@
 #include "WarmupChallenges.h"
 
 WarmupChallenges::WarmupChallenges() {
-	// TODO Auto-generated constructor stub
 
 }
 
 WarmupChallenges::~WarmupChallenges() {
-	// TODO Auto-generated destructor stub
+
 }
 
 int WarmupChallenges::Test1(int a, int b)
@@ -138,6 +137,27 @@ std::string WarmupChallenges::Test9(std::string sInput)
 		osResult << "00" << sInput.substr(2, sInput.length()-4); //Correct the hour value and removes the AM indicator
 	else
 		osResult << sInput.substr(0, sInput.length()-2); //Removes the AM indicator
+
+	return osResult.str();
+}
+
+std::string WarmupChallenges::Test10(unsigned long int n, std::vector<unsigned long int> arr)
+{
+	std::ostringstream osResult;
+
+	unsigned long int iCandles = 0, iMaxHeight = 0;
+
+	for(unsigned long int i = 0; i < n; i++){
+	  if(arr[i] > iMaxHeight)
+	  {
+		  iMaxHeight = arr[i];
+		  iCandles = 1;
+	  }
+	  else if (arr[i] == iMaxHeight)
+		  iCandles++;
+	}
+
+	osResult << iCandles;
 
 	return osResult.str();
 }
