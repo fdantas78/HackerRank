@@ -110,11 +110,23 @@ int main() {
 		pWarmupChallenges->Print_Separator();
 
 		//Initialization
-		int n = 6;
+		unsigned int n = 6;
 		std::vector<long long int> arr = {1, 2256, 5, 4, 3, 88556, 7, 8};
 
 		//Solution
 		std::cout << pWarmupChallenges->Test8(n,arr) << std::endl;
+		pWarmupChallenges->Print_Separator();
+	}
+
+	{
+		std::cout << "Time Conversion" << std::endl;
+		pWarmupChallenges->Print_Separator();
+
+		//Initialization
+		std::string sInput= "12:05:45AM";
+
+		//Solution
+		std::cout << pWarmupChallenges->Test9(sInput) << std::endl;
 		pWarmupChallenges->Print_Separator();
 	}
 

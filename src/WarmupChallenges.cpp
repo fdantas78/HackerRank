@@ -101,15 +101,14 @@ std::string WarmupChallenges::Test7(int n)
 	return osStair.str();
 }
 
-std::string WarmupChallenges::Test8(int n, std::vector<long long int>& arr)
+std::string WarmupChallenges::Test8(unsigned int n, std::vector<long long int>& arr)
 {
-	std::ostringstream osResult;
 	long long int iMin = 0, iMax = 0;
 
-	//Order arry min to max
+	//Order array min to max
 	std::sort(arr.begin(), arr.end(),std::less<long long int>());
 
-	for(int i = 0; i < arr.size(); i++){
+	for(unsigned int i = 0; i < arr.size(); i++){
 		if(i < n) //Sums only the first n numbers
 			iMin += arr[i];
 		if(i >= (arr.size() - n))  //Sums only the last n numbers
@@ -119,4 +118,26 @@ std::string WarmupChallenges::Test8(int n, std::vector<long long int>& arr)
     }
 
 	return std::to_string(iMin) + " " + std::to_string(iMax);
+}
+
+std::string WarmupChallenges::Test9(std::string sInput)
+{
+	std::ostringstream osResult;
+
+	int iHour = 0;
+	std::string sAM_PM = "";
+
+	//With a hh:mm:ssAM or hh:mm:ssPM format
+	iHour = stoi(sInput.substr(0,2)); //Extract the hour value
+	sAM_PM = sInput.substr(sInput.length()-2,2); //Extract the AM/PM value
+	//std::cout << iHour << sAM_PM;
+
+	if(sAM_PM == "PM" && iHour != 12)
+		osResult << (iHour + 12) << sInput.substr(2, sInput.length()-4); //Correct the hour value and removes the PM indicator
+	else if(sAM_PM == "AM" && iHour == 12)
+		osResult << "00" << sInput.substr(2, sInput.length()-4); //Correct the hour value and removes the AM indicator
+	else
+		osResult << sInput.substr(0, sInput.length()-2); //Removes the AM indicator
+
+	return osResult.str();
 }
