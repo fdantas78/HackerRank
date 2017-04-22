@@ -156,11 +156,28 @@ void Show_ImplementationChallenges()
 		pImplementationChallenges->Print_Separator();
 
 		//Initialization
-		int n = 4;
+		//int n = 4;
 		std::vector<int> arr = {73, 67, 38, 33};
 
 		//Solution
-		std::cout << pImplementationChallenges->Test1(arr) << std::endl;
+		std::cout << pImplementationChallenges->Test1(arr);
+		pImplementationChallenges->Print_Separator();
+	}
+
+	{
+		std::cout << "Apple and Orange" << std::endl;
+		pImplementationChallenges->Print_Separator();
+
+		//Initialization
+
+		unsigned int s = 7, t = 11, a = 5, b = 15;
+		//m = 3, n = 2;
+		std::vector<long int> arr_m = {-2, 2, 1, 3, 4, 5};
+		std::vector<long int> arr_n = {5, -6, -7, -8};
+
+		//Solution
+		std::cout << pImplementationChallenges->Test2(s,t,a,arr_m); //apples
+		std::cout << pImplementationChallenges->Test2(s,t,b,arr_n); //oranges
 		pImplementationChallenges->Print_Separator();
 	}
 
@@ -169,7 +186,7 @@ void Show_ImplementationChallenges()
 
 int main() {
 
-	Show_WarmupChallenges();
+	//Show_WarmupChallenges();
 	Show_ImplementationChallenges();
 
 	return 0;

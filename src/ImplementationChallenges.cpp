@@ -34,3 +34,20 @@ std::string ImplementationChallenges::Test1(std::vector<int> arr)
 	return osResult.str();
 }
 
+std::string ImplementationChallenges::Test2(unsigned int house_x1, unsigned int house_x2, unsigned int tree_x, std::vector<long int> drops)
+{
+	std::ostringstream osResult;
+	unsigned long int iCount = 0;
+
+	//Validates placement
+	for(unsigned int i = 0; i < drops.size(); i++)
+	{
+		if((drops[i]+tree_x) >= house_x1 && (drops[i]+tree_x) <= house_x2) //Drops inside house range
+			iCount++;
+	}
+
+	osResult << iCount << std::endl;
+
+	return osResult.str();
+}
+

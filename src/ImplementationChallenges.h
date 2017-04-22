@@ -22,6 +22,7 @@ public:
 	void Print_Separator(void) {std::cout << "-------------------" << std::endl;}
 
 	std::string Test1(std::vector<int> arr);
+	std::string Test2(unsigned int house_x1, unsigned int house_x2, unsigned int tree_x, std::vector<long int> drops);
 };
 
 #endif /* IMPLEMENTATIONCHALLENGES_H_ */
