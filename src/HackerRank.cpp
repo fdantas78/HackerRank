@@ -8,9 +8,10 @@
 
 #include <iostream>
 #include "WarmupChallenges.h"
+#include "ImplementationChallenges.h"
 
-int main() {
-
+void Show_WarmupChallenges()
+{
 	WarmupChallenges* pWarmupChallenges = new WarmupChallenges();
 	std::cout << "Warmup Challenges" << std::endl << std::endl;
 
@@ -134,6 +135,7 @@ int main() {
 		std::cout << "Birthday Cake Candles" << std::endl;
 		pWarmupChallenges->Print_Separator();
 
+		//Initialization
 		unsigned long int n = 10;
 		std::vector<unsigned long int> arr = {10,18, 90, 90, 13, 90, 75, 90, 8, 90, 43};
 
@@ -141,6 +143,34 @@ int main() {
 		std::cout << pWarmupChallenges->Test10(n, arr) << std::endl;
 		pWarmupChallenges->Print_Separator();
 	}
+
+	std::cout << "End of Warmup Challenges" << std::endl << std::endl;
+}
+void Show_ImplementationChallenges()
+{
+	ImplementationChallenges* pImplementationChallenges = new ImplementationChallenges();
+	std::cout << "Implementation Challenges" << std::endl << std::endl;
+
+	{
+		std::cout << "Grading Students" << std::endl;
+		pImplementationChallenges->Print_Separator();
+
+		//Initialization
+		int n = 4;
+		std::vector<int> arr = {73, 67, 38, 33};
+
+		//Solution
+		std::cout << pImplementationChallenges->Test1(arr) << std::endl;
+		pImplementationChallenges->Print_Separator();
+	}
+
+	std::cout << "End of Implementation Challenges" << std::endl << std::endl;
+}
+
+int main() {
+
+	Show_WarmupChallenges();
+	Show_ImplementationChallenges();
 
 	return 0;
 }
