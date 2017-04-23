@@ -181,6 +181,19 @@ void Show_ImplementationChallenges()
 		pImplementationChallenges->Print_Separator();
 	}
 
+	{
+		std::cout << "Kangaroo" << std::endl;
+		pImplementationChallenges->Print_Separator();
+
+		//Initialization
+
+		int x1 = 0, v1 = 2, x2 = 5, v2 = 3;
+
+		//Solution
+		std::cout << pImplementationChallenges->Test3(x1,v1,x2,v2);
+		pImplementationChallenges->Print_Separator();
+	}
+
 	std::cout << "End of Implementation Challenges" << std::endl << std::endl;
 }
 

@@ -51,3 +51,23 @@ std::string ImplementationChallenges::Test2(unsigned int house_x1, unsigned int 
 	return osResult.str();
 }
 
+std::string ImplementationChallenges::Test3(int x1, int v1, int x2, int v2)
+{
+	std::ostringstream osResult;
+	int iDistance = std::abs(x2-x1); //Initial distance
+
+	do {
+		if(x1 == x2)
+		{
+			osResult << "YES" << std::endl;
+			break;
+		}
+		x1 += v1;
+		x2 += v2;
+	} while(std::abs(x2-x1) < iDistance);
+
+	if(x1 != x2)
+		osResult << "NO" << std::endl;
+
+	return osResult.str();
+}
