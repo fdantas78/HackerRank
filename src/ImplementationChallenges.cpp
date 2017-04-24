@@ -71,3 +71,34 @@ std::string ImplementationChallenges::Test3(int x1, int v1, int x2, int v2)
 
 	return osResult.str();
 }
+
+std::string ImplementationChallenges::Test4(std::vector<int> arr1, std::vector<int> arr2)
+{
+	std::ostringstream osResult;
+	int iCount = 0;
+	bool bFactor = false;
+
+	for (int i=1; i <= 100; i++){
+		for(unsigned int j = 0; j < arr1.size(); j++){
+			bFactor = i%arr1[j] == 0;
+			if(!bFactor) //Stops at the first member of arr1 not being a factor of i
+				break;
+		}
+
+		if(bFactor) //Enters only if all members of arr1 are a factor of i
+		{
+			for(unsigned int k = 0; k < arr2.size(); k++){
+				bFactor = arr2[k]%i == 0;
+				if(!bFactor) //Stops at i not being a factor of a member of arr2
+					break;
+			}
+
+			if(bFactor) //All conditions met
+				iCount++;
+		}
+	}
+
+	osResult << iCount << std::endl;
+
+	return osResult.str();
+}

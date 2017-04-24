@@ -194,6 +194,19 @@ void Show_ImplementationChallenges()
 		pImplementationChallenges->Print_Separator();
 	}
 
+	{
+			std::cout << "Between Two Sets" << std::endl;
+			pImplementationChallenges->Print_Separator();
+
+			//Initialization
+			std::vector<int> arr1 = {2,4};
+			std::vector<int> arr2 = {16,32,96};
+
+			//Solution
+			std::cout << pImplementationChallenges->Test4(arr1,arr2);
+			pImplementationChallenges->Print_Separator();
+		}
+
 	std::cout << "End of Implementation Challenges" << std::endl << std::endl;
 }
 
