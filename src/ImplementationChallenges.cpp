@@ -102,3 +102,29 @@ std::string ImplementationChallenges::Test4(std::vector<int> arr1, std::vector<i
 
 	return osResult.str();
 }
+
+std::string ImplementationChallenges::Test5(std::vector<int> arr1)
+{
+	std::ostringstream osResult;
+	int iMaxScore = 0, iMinScore = 0, iCountMax = 0, iCountMin = 0;
+
+	//Load Min and Max Scores
+	iMaxScore = iMinScore = arr1[0];
+
+	for(unsigned int i = 0; i < arr1.size(); i++){
+		if(arr1[i] > iMaxScore)
+		{
+			iMaxScore = arr1[i];
+			iCountMax++;
+		}
+		else if(arr1[i] < iMinScore)
+		{
+			iMinScore = arr1[i];
+			iCountMin++;
+		}
+	}
+
+	osResult << iCountMax << " " << iCountMin << std::endl;
+
+	return osResult.str();
+}

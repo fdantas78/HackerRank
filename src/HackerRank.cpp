@@ -195,17 +195,30 @@ void Show_ImplementationChallenges()
 	}
 
 	{
-			std::cout << "Between Two Sets" << std::endl;
-			pImplementationChallenges->Print_Separator();
+		std::cout << "Between Two Sets" << std::endl;
+		pImplementationChallenges->Print_Separator();
 
-			//Initialization
-			std::vector<int> arr1 = {2,4};
-			std::vector<int> arr2 = {16,32,96};
+		//Initialization
+		std::vector<int> arr1 = {2,4};
+		std::vector<int> arr2 = {16,32,96};
 
-			//Solution
-			std::cout << pImplementationChallenges->Test4(arr1,arr2);
-			pImplementationChallenges->Print_Separator();
-		}
+		//Solution
+		std::cout << pImplementationChallenges->Test4(arr1,arr2);
+		pImplementationChallenges->Print_Separator();
+	}
+
+	{
+		std::cout << "Breaking the Records" << std::endl;
+		pImplementationChallenges->Print_Separator();
+
+		//Initialization
+		std::vector<int> arr1 = {3, 4, 21, 36, 10, 28, 35, 5, 24, 42};
+
+		//Solution
+		std::cout << pImplementationChallenges->Test5(arr1);
+		pImplementationChallenges->Print_Separator();
+	}
+
 
 	std::cout << "End of Implementation Challenges" << std::endl << std::endl;
 }

@@ -25,6 +25,7 @@ public:
 	std::string Test2(unsigned int house_x1, unsigned int house_x2, unsigned int tree_x, std::vector<long int> drops);
 	std::string Test3(int x1, int v1, int x2, int v2);
 	std::string Test4(std::vector<int> arr1, std::vector<int> arr2);
+	std::string Test5(std::vector<int> arr1);
 };
 
 #endif /* IMPLEMENTATIONCHALLENGES_H_ */
