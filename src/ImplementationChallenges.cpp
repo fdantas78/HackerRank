@@ -128,3 +128,29 @@ std::string ImplementationChallenges::Test5(std::vector<int> arr1)
 
 	return osResult.str();
 }
+
+std::string ImplementationChallenges::Test6(std::vector<int> arr, int d, int m)
+{
+	std::ostringstream osResult;
+	int iSum = 0, iCount = 0;
+
+	for(unsigned int i = 0; i < arr.size(); i++){
+
+		if (i+m > arr.size())
+			break;
+
+		for(unsigned int j = 0; j < m; j++){
+			iSum += arr[i+j];
+			std::cout << i+j << " - ";
+		}
+
+		if(iSum == d)
+			iCount++;
+
+		iSum = 0;
+	}
+
+	osResult << iCount << std::endl;
+
+	return osResult.str();
+}

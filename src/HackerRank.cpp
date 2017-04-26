@@ -220,6 +220,19 @@ void Show_ImplementationChallenges()
 	}
 
 
+	{
+		std::cout << "Birthday Chocolate" << std::endl;
+		pImplementationChallenges->Print_Separator();
+
+		//Initialization
+		std::vector<int> arr = {1, 2, 1, 3, 2};
+		int d = 3, m = 2;
+
+		//Solution
+		std::cout << pImplementationChallenges->Test6(arr, d, m);
+		pImplementationChallenges->Print_Separator();
+	}
+
 	std::cout << "End of Implementation Challenges" << std::endl << std::endl;
 }
 

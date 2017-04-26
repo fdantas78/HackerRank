@@ -26,6 +26,7 @@ public:
 	std::string Test3(int x1, int v1, int x2, int v2);
 	std::string Test4(std::vector<int> arr1, std::vector<int> arr2);
 	std::string Test5(std::vector<int> arr1);
+	std::string Test6(std::vector<int> arr, int d, int m);
 };
 
 #endif /* IMPLEMENTATIONCHALLENGES_H_ */
